@@ -1,33 +1,52 @@
 <?php
 /**
- * The main template file.
+ * Template file index
  *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ * @package statsocial
+ * @since statsocial 0.940
  *
- * @package Pilcrow
- * @since Pilcrow 1.0
+ * @uses get_header( $statsocial_document_type )	include template part file
+ * @uses is_home( )	Check Conditional is home page or not
+ * @uses is_active_sidebar( 'sidebar-3' )	include template part file
+ * @uses dynamic_sidebar( 'sidebar-3' )	include template part file
+ * @uses statsocial_yui_class_modify( )	add class attribute value
+ * @uses is_2col_statsocial( 'style="width:99%;"' )	add inline style attribute
+ * @uses get_template_part( 'loop', 'default' )	include template part file
+ * @uses get_sidebar( 'extra' )	include template part file
+ * @uses get_sidebar( 'default' )	include template part file
+ * @uses get_footer( $statsocial_document_type ) 
  */
-
-get_header(); ?>
-
-<div id="content-container">
-	<div id="content" role="main">
-
-	<?php
-		/* Run the loop to output the posts.
-		 * If you want to overload this in a child theme then include a file
-		 * called loop-index.php and that will be used instead.
-		 */
-		get_template_part( 'loop', 'index' );
-	?>
-
-	</div><!-- #content -->
-</div><!-- #content-container -->
-
-<?php
-get_sidebar();
-get_footer();
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+global $rsidebar_show, $statsocial_document_type;
+get_header( $statsocial_document_type );
+do_action( 'statsocial_pre_' . basename( __FILE__ ) );
+statsocial_debug_navitation( __FILE__ );
+?>
+<div id="yui-main">
+    <div class="yui-b">
+                <?php get_template_part( 'widget', 'sticky' ); ?>
+        <div class="<?php echo statsocial_yui_class_modify(); ?>" id="container">
+            <div class="yui-u first<?php statsocial_add_class( 'yui-u first', true ); ?>" <?php statsocial_doctype_elements( '', 'role="main"' ); ?>>
+<?php get_template_part( 'loop', $statsocial_document_type ); ?>
+                <br style="clear:both" />			
+            </div>
+            <div class="yui-u">
+                <?php statsocial_prepend_extra_sidebar(); ?>
+            <?php if ( $rsidebar_show ) {
+                get_sidebar( 'extra' );
+            } ?>
+<?php statsocial_append_extra_sidebar(); ?>
+            </div>
+    <?php //add nest grid here  ?>
+        </div>
+    </div>
+</div>
+<div class="yui-b">
+<?php statsocial_prepend_default_sidebar(); ?>
+<?php get_sidebar( 'default' ); ?>
+<?php statsocial_append_default_sidebar(); ?>	
+</div>
+</div>
+<?php get_footer( $statsocial_document_type ); ?>

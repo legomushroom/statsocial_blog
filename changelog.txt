@@ -1,0 +1,2356 @@
+Changelog -----------------------------------
+version:1.217
+	Modified statsocial Statusbar User Interface
+		Change from Statusbar shows Scroll Y to Statusbar shows mouse position browser bottom.
+	Modified statsocial Page shows with Accessibility
+		Even if the accessibility setting is disabled in the Rain Drops theme,
+		in the theme options page and added a link to be displayed by enabling accessibility temporarily
+		This change will be unset by a $ statsocial_accessibility_link = false
+		In this change, the default value of the accessibility setting has been changed to no.
+Changelog -----------------------------------
+Changelog -----------------------------------
+version:1.216
+	Fixed
+		Fixed post_class() wrong setting at statsocial_tile()
+Changelog -----------------------------------
+version:1.215
+	Modified Featured image size change from 600 x 200 to fullsize
+		if you no need change , Please change functions.php line703 $statsocial_featured_image_full_size = false;
+	Added
+		The Events Calendar plugin style modify.
+----------------------------------------------
+Changelog -----------------------------------
+version:1.214
+removed
+	Removed remove_theme_mods();
+		lib/option-panel.php
+----------------------------------------------
+Changelog -----------------------------------
+version:1.213
+Modified
+	modify theme peformance
+----------------------------------------------
+Changelog -----------------------------------
+version:1.212
+
+Fixed
+	statsocial Status bar works improperly at 750px 950px 974px static page width.
+Modified
+	Add Print style
+
+	Optimising Images
+		Luigi Rosa
+			Thank you for contribute
+				modified:   images/bg.png
+				modified:   images/dummy.png
+				modified:   images/footer.png
+				modified:   images/footerbck.png
+				modified:   images/h2.png
+				modified:   images/h2b.png
+				modified:   images/h2c.png
+				modified:   images/header.png
+				modified:   images/info.png
+				modified:   images/ja-em.png
+				modified:   images/link.png
+				modified:   images/next.png
+				modified:   images/number.png
+				modified:   images/options/arrows-vs.png
+				modified:   images/options/icons32-vs.png
+				modified:   images/please_upload.png
+				modified:   images/post-format-aside.png
+				modified:   images/post-format-audio.png
+				modified:   images/post-format-chat.png
+				modified:   images/post-format-gallery.png
+				modified:   images/post-format-image.png
+				modified:   images/post-format-link.png
+				modified:   images/post-format-quote.png
+				modified:   images/post-format-status.png
+				modified:   images/post-format-video.png
+				modified:   images/previous.png
+				modified:   images/statsocial-chat-author-0.png
+				modified:   images/statsocial-chat-author-1.png
+				modified:   images/statsocial-chat-author-2.png
+				modified:   images/statsocial-chat-author-3.png
+				modified:   images/statsocial-chat-author-4.png
+				modified:   images/statsocial-chat-author-5.png
+				modified:   images/statsocial-nav-menu-expand.png
+				modified:   images/statsocial-nav-menu-shrunk.png
+				modified:   images/require.png
+				modified:   images/retina/info.png
+				modified:   images/retina/link.png
+				modified:   images/retina/next.png
+				modified:   images/retina/post-format-aside.png
+				modified:   images/retina/post-format-audio.png
+				modified:   images/retina/post-format-chat.png
+				modified:   images/retina/post-format-gallery.png
+				modified:   images/retina/post-format-image.png
+				modified:   images/retina/post-format-link.png
+				modified:   images/retina/post-format-quote.png
+				modified:   images/retina/post-format-status.png
+				modified:   images/retina/post-format-video.png
+				modified:   images/retina/previous.png
+				modified:   images/retina/statsocial-chat-author-0.png
+				modified:   images/retina/statsocial-chat-author-1.png
+				modified:   images/retina/statsocial-chat-author-2.png
+				modified:   images/retina/statsocial-chat-author-3.png
+				modified:   images/retina/statsocial-chat-author-4.png
+				modified:   images/retina/statsocial-chat-author-5.png
+				modified:   images/retina/require.png
+				modified:   images/retina/rss.png
+				modified:   images/retina/stop.png
+				modified:   images/rss.png
+				modified:   images/screen-shot-dark.png
+				modified:   images/screen-shot-light.png
+				modified:   images/screen-shot-minimal.png
+				modified:   images/screen-shot-w3standard.png
+				modified:   images/sidebar.png
+				modified:   images/sticky.png
+				modified:   images/stop.png
+				modified:   images/topbck.png
+
+----------------------------------------------
+Changelog -----------------------------------
+version:1.211
+
+Added
+	statsocial Status bar at browser bottom ( It shows when scroll-y 200px )
+		for sub navigation.
+Fixed
+	Fixed shows scrollbar-x when 600px > Browser width.
+Modified
+	Code cleaning
+----------------------------------------------
+Changelog -----------------------------------
+version:1.210
+
+Fixed
+	Fixed	blank-front.php template
+		Notwork Main column shows 2column when page width fluid (responsive) and browser width > 1280px;
+
+Modified
+	Customize.php Label change from 'Display Header Text' to 'Move Tagline from header image to top right'
+	accessibility  style change statsocial-accessible-mode .hfeed a:focus style
+----------------------------------------------
+Changelog -----------------------------------
+version:1.208
+
+Fixed
+	Fixed out-of-the-box
+	 Save data without user action.
+
+Modified
+	blank-front.php template
+		Main column shows 2column when page width fluid (responsive) and browser width > 1280px;
+
+	Change statsocial Default setting
+		Accessibility Setting default value from no to yes.
+----------------------------------------------
+Changelog -----------------------------------
+version:1.206
+
+modified
+		 Modified Static Page Template blank-front.php
+			It is now be able to view the featured image in the list of each of the specified list of recent post,
+			list that specifies the tag, the category. and can also specify the excerpt length
+
+			Live Preview below
+			http://www.tenman.info/wp3/previewstatsocial/blank-front-template/
+----------------------------------------------
+Changelog -----------------------------------
+version:1.205
+
+modified
+		 Support Admin Color Scheme theme option page
+
+----------------------------------------------
+Changelog -----------------------------------
+version:1.204
+
+moved
+
+	Removed from header.php( html5 header template part file ) blow
+
+		http://html5shiv.googlecode.com/svn/trunk/html5.js
+
+		statsocial html5 stop support for OLD Browser( IE8,IE7 )
+
+		IE old browser shows allways xhtml document type.
+
+		Note: This change is SERVER_SIDE settings,
+		I recommend that the browser is set
+		when the cache of less than IE9 as not performed
+added
+
+	function statsocial_prepend_loop()
+
+		You can add loop before content with
+		action hook statsocial_prepend_loop or template part file(
+		hook-prepend-loop.php )
+
+	function statsocial_append_loop()
+
+		You can add loop before content with
+		action hook statsocial_append_loop or template part file(
+		hook-append-loop.php )
+
+----------------------------------------------
+Changelog -----------------------------------
+version:1.203
+	Modify
+		Modify html list element basic style remove for plugin compatibility
+	Fixed
+		Fixed class statsocial_unique_identifier_walker_nav_menu
+				has error ( empty object notice )
+
+		Fixed statsocial bug with prettyPhoto
+
+			@see https://wordpress.org/support/topic/statsocial-bug-with-prettyphoto?replies=8
+
+			Thank you @0soYoung
+
+		Fixed Gist embed script display improperly.
+
+		Fixed Creyon syntax highlighter improperly.
+			http://wordpress.org/plugins/crayon-syntax-highlighter/
+
+		Fixed statsocial CSS table class works improperly.
+
+		table element example ( indivisual styles for each post )
+
+    <table class="auto left">
+        <col class="left-column">
+        <col class="right-column">
+        <tbody>
+            <tr>
+                <th colspan="2">Example table element</th>
+            </tr>
+             <tr>
+                <td class="center"><img src="http://www.tenman.info/images/pen.jpg" width="100" alt="test image" /></td>
+                <td class="left">text align left use CLASS left</td>
+            </tr>
+            <tr>
+                <td class="right">text align right use CLASS right</td>
+                <td class="left">text align left use CLASS left</td>
+            </tr>
+            <tr>
+                <td class="center">text align center use CLASS center</td>
+                <td class="center">text align center use CLASS center</td>
+            </tr>
+          <tr>
+                <td class="left">text align center use CLASS center</td>
+                <td class="right">text align right use CLASS right</td>
+            </tr>
+        </tbody>
+    </table>
+
+	CSS
+		create a customfield
+			name:css
+			value:
+			/* columns width.( need table css class auto )*/
+			.left-column{
+			width:100px;
+			}
+			.right-column{
+			width:auto;
+			background:#eee;
+			}
+			/* cell color and background */
+			td:first-child{
+			background:#ccc;
+			color:#000;
+			border:1px dotted #999;
+			}
+			td:last-child{
+			background:#eee;
+			color:#000;
+			border:1px solid #aaa;
+			}
+			th{
+			background:#aaa;
+			color:#fff;
+			font-size:138.5%;
+			}
+			/* width of table */
+			table{
+			width:100%;
+			margin:3em auto;
+			}
+
+----------------------------------------------
+Changelog -----------------------------------
+version:1.202
+	Fixed
+		Header image not shows when wp-content dir rename.
+	Added
+		function statsocial_custom_field_meta_helper()
+		file preparation.php
+			 blank template for NO FTP ( Theme Editor ) users
+----------------------------------------------
+Changelog -----------------------------------
+version:1.201
+modified
+	Arbitrary Header/Footer Scripts:	Stop default
+
+		Deactivate default functionality, add to header embed script from custom field.
+			functions.php
+				define( 'statsocial_CUSTOM_FIELD_SCRIPT' , false );
+					Anyone can not use custom field name 'javascript'.
+
+	Arbitrary Header CSS:	Same as the conventional
+
+			functions.php
+				define( 'statsocial_CUSTOM_FIELD_SCRIPT' , true );
+					Need editor role.
+	Arbitrary Header Elements:	It is available, but limit has been added
+
+		Use the custom field name meta, there was no limit to the element
+		that can be inserted, but it was decided to limit.
+		Can be inserted element,
+		it was decided to limit base, link, meta element.
+				Need editor role. only singular page, post.
+
+			Purpose of Arbitrary.
+				Add OGP(Open Graph Protocol) handmade
+					<meta property="og:title" content="test">
+					<meta property="og:type" content="article">
+					<meta property="og:description" content="test">
+					<meta property="og:url" content="test">
+					<meta property="og:image" content="test">
+					<meta property="og:site_name" content="test">
+					<meta property="og:email" content="test@test.com">
+
+				When post content has relative links,define base URL and target.
+					<base href="http://www.tenman.info/images/" target="_blank">
+	Added
+		Template widget-sticky.php
+----------------------------------------------
+Changelog -----------------------------------
+version:1.200
+	Modify IMPORTANT CHANGES
+		out-of-the-box support
+			statsocial not save default settings to the database without explicit user action
+			You can check as follows: statsocial theme is whether you are using a database table
+
+			statsocial options page title after message.
+				Now, statsocial Not Using Database Table
+				or
+				Saved Database table name: Saved Table Name
+
+		Note: For child theme developers
+			About Child Theme UNINSTALL.
+
+			add_action( 'switch_theme', 'child_theme_uninstall' );
+
+			function child_theme_uninstall(){
+
+				delete_option( "child_theme_settings" );
+				// Do not foget remove statsocial theme settings.
+				delete_option("statsocial_theme_settings");
+			}
+
+If you do not perform this setting, it was uninstalled the child theme, If you then install the statsocial, will be read as the theme settings to change the child theme. In this case, it may be different from the default display, it is to be displayed, such as w3standard.
+
+	Fixed wp_nav_menu() display impropely when accessibility settions 'no'
+			hover action not work
+
+----------------------------------------------
+Changelog -----------------------------------
+version:1.163
+	Add
+		statsocial_comments_link()
+			separate from statsocial_posted_on()
+		filter hook statsocial_portfolio_nav
+	Modify
+		sidebar-default.php WAI-AREA role value change from complementary to navigation
+----------------------------------------------
+Changelog -----------------------------------
+version:1.162
+	Modify
+		Link text: The Continue Reading link, when theme option accessibility settings true
+		Keyboard navigation support at primary menu
+		Comment form add add aria-required="true" when theme option Document type settings html5
+		Add ARIA Roles:role="complementary",role="contentinfo", role="main"
+		CSS class screen-reader-text change left to crip
+----------------------------------------------
+Changelog -----------------------------------
+version:1.161
+	Modify
+		statsocial_year_list()
+		statsocial_month_list()
+		statsocial_fallback_title()
+		statsocial_nav_menu_primary()
+	Add Class statsocial_unique_identifier_walker_nav_menu extends Walker_Nav_Menu
+----------------------------------------------
+Changelog -----------------------------------
+version:1.159
+	Fixed Can not detect browser page width 750px 950px 974px.
+	Modify Update file languages / statsocial.pot
+	Modify Hide Featured image when password post.
+----------------------------------------------
+Changelog -----------------------------------
+version:1.158
+	Fixed
+		Fixed statsocial.js not work at Firefox26.0
+
+			functions.php line:1500
+				Change from:
+				wp_register_script( 'statsocial', $statsocial_js, array( 'jquery' ), $statsocial_current_data_version, true );
+				to:
+				wp_register_script( 'statsocial', $statsocial_js, array( 'jquery', 'jquery-migrate' ), $statsocial_current_data_version, false );
+
+       Fixed Untranslated string $statsocial_comment_string
+				contribute: lrosa
+					Thank you.
+----------------------------------------------
+Changelog -----------------------------------
+version:1.156
+modified
+	Add CSS class detect IE11 and modified CSS
+	modified statsocial_nav_menu_primary()
+	modified ja.po , ja.mo
+	Fixed
+		Fixed Not display theme infomation help
+
+----------------------------------------------
+Changelog -----------------------------------
+version:1.155
+	Modify
+		CSS class color-5,color-4,color-3,color-2,color-1,color1,color2,color3,color4,color5.
+		Child a elements color set automaticaly.
+	Modify
+		Remove entry title permalink from singular post and page
+	Fixed
+		Not display statsocial help.
+		filter change from contextual_help to load-post.php,load-post-new.php.
+----------------------------------------------
+Changelog -----------------------------------
+version:1.154
+	Fixed functions.php line: 3172
+        Typo Change from return 'test' . $header_image->height;
+        			to   return $header_image->height;
+----------------------------------------------
+Changelog -----------------------------------
+version:1.153
+	Modyfy
+		Remove tag fixed-width ,flexible-width
+		Change screenshot.png size from 600x450 to 880x660
+	Fix
+		Fixed statsocial_tile() navigation link improperly.
+----------------------------------------------
+Changelog -----------------------------------
+version:1.152
+	Modyfy
+		Add filter hooks
+			statsocial_load_text_domain
+		Add function
+			statsocial_add_more()
+		Modyfy function
+			statsocial_color_base_clone()
+
+		Add statsocial-config-example.php
+			When If you need more customize
+			Rename from statsocial-config-example.php
+					to statsocial-config.php
+			and set your value.
+
+		Add Sidebar and contents equal height support.
+			( without list-of-post.php )
+
+		Add function add args
+			statsocial_recent_posts()
+			statsocial_category_posts()
+
+		Add tags
+			fixed-layout,
+			fluid-layout,
+			responsive-layout,
+			accessibility-ready
+
+	Note: How to enable accessibility settings
+
+		1. Open statsocial theme settings page.
+			( Dashboard / Appearance / statsocial theme settings )
+		2. Accessibility Settings edit value set yes. and save.
+
+----------------------------------------------
+Changelog -----------------------------------
+version:1.149
+	Modify
+		Add statsocial setting option var
+			$statsocial_show_theme_option
+				default true
+				false then theme option page hide.
+		Add filter hook statsocial_base_font_size
+			statsocial base font size is 13px;
+			Set base font size when CSS body font size.
+				for example change from 13px to 16px
+
+				add_filter( 'statsocial_base_font_size', 'my_test' );
+
+				function my_test( $content ){
+					return 16;
+				}
+		Add action hook statsocial_remove_theme_mods
+			For child themes
+----------------------------------------------
+Changelog -----------------------------------
+version:1.148
+	Fixed
+		Fixed Warning: Missing argument 2 for add_action()
+			lib/option-panel.php
+			Change from add_action ( 'statsocial_SubMenu_GUI_pre' )
+					to do_action ( 'statsocial_SubMenu_GUI_pre' )
+			Typo.
+		Fixed Not shows placemarks width Basic Google Maps Placemarks
+			style rules issue.
+			Change from .hfeed div to .hfeed > div
+	Modify
+		function statsocial_loop_class()
+	Add filter
+		add_filter( 'esc_html', 'remove_wbr' ,999);
+			Remove wbr element when Plugins used esc_html for title
+	Add function
+		function statsocial_list_of_posts()
+			For static page template list-of-post.php
+		function statsocial_tile()
+			For front-portfolio.php
+	Add file
+		Static page template list-of-post.php
+----------------------------------------------
+Changelog -----------------------------------
+version:1.147
+	Add file
+		images/headers/index.php
+		images/index.php
+		images/options/index.php
+		languages/css/index.php
+		languages/index.php
+		lib/csscolor/index.php
+		lib/index.php
+		page-templates/index.php
+	Add deny direct access code each templates
+		if ( ! defined( 'ABSPATH' ) ) { exit; }
+	Add action hook
+		statsocial_customize_register
+		statsocial_customize_register
+	Add filter hook
+		statsocial_chat_filter
+----------------------------------------------
+Changelog -----------------------------------
+version:1.146
+	Fixed
+		Fixed broken function
+			statsocial_link_unique()
+				functions.php
+----------------------------------------------
+Changelog -----------------------------------
+version:1.145
+	Coding style change
+		Fine correction , needs minimam
+	Fixed
+		Fixed html comment error from &lt;! -- to &lt;!--
+----------------------------------------------
+Changelog -----------------------------------
+version:1.144
+	Coding style change
+		indent from space to tab
+	Fixed
+		Post data sanitize
+			lib/option-panel.php
+				statsocial_upload_image()
+----------------------------------------------
+Changelog -----------------------------------
+version:1.143
+	Coding style change
+		syntax change
+			from and to &&
+			from or to ||
+		use Yoda Conditions
+		Remove Trailing Spaces
+----------------------------------------------
+Changelog -----------------------------------
+version:1.142
+	Fixed function name improperly, not prefixed
+		Change
+		from custom_remove_aria_required1()
+		to statsocial_custom_remove_aria_required1
+		Change
+		from custom_remove_aria_required1()
+		to statsocial_custom_remove_aria_required1
+----------------------------------------------
+Changelog -----------------------------------
+version:1.141
+	Remove currently not using functions , vars and PHP5.4 strict errors
+
+		Remove function statsocial_get_month()
+		Remove function &statsocial_raiseError()
+			lib/csscolor/csscolor.php
+		Remove ver $count
+			lib/option-panel.php
+
+	Replace function
+
+		from move_uploaded_file()
+		to wp_handle_upload()
+
+	Add filter function statsocial_theme_upload_filename()
+----------------------------------------------
+Changelog -----------------------------------
+version:1.140
+	Fixed Header image not shown
+----------------------------------------------
+Changelog -----------------------------------
+version:1.139
+	Add action hooks all templates
+		do_action( 'statsocial_pre_'.basename( __FILE__) );
+		do_action( 'statsocial_after_'.basename( __FILE__) );
+
+	Add action hooks all template part files
+		do_action( 'statsocial_pre_part_'. basename( __FILE__, '.php' ). '_'. basename( $template ) );
+		do_action( 'statsocial_after_part_'. basename( __FILE__, '.php' ). '_'. basename( $template ) );
+	Add filter hooks functions.php
+		statsocial_theme_url
+		statsocial_author_url
+
+	Add function statsocial_detect_header_image_size( $xy = 'width' )
+		functions.php
+	Add new dynamic CSS class statsocial-pub-new,statsocial-mod-new
+		statsocial_post_class() functions.php
+		description: statsocial-pub-new and statsocial-mod-new
+			From the present, it is contributed
+			within three days or
+			the above-mentioned class is
+			automatically added to the updated contribution.
+
+		3day change 7day
+
+			add_filter( 'statsocial_new_period', 'my_new_period' );
+			function my_new_period( $day ) {
+
+				return 7;
+			}
+----------------------------------------------
+Changelog -----------------------------------
+version:1.138
+Added
+	Add Action hooks functions.php
+		do_action( 'statsocial_include_after' );
+		do_action( 'statsocial_last' );
+
+Fixed
+	Previus review issue
+		Deprecated: Function split() is deprecated
+		Change from  split()
+		to preg_split( '[x,*]', $size );
+	Fixed When statsocial_USE_AUTO_COLOR == false
+		statsocial_edit_help() has error.
+----------------------------------------------
+Changelog -----------------------------------
+version:1.137
+Fixed
+	Fixed custom-doc display improperly.
+		when functions.php $statsocial_page_width value set
+		then page width display improperly and header image hide.----------------------------------------------
+Changelog -----------------------------------
+version:1.136
+Add
+	Add new function statsocial_comment_class()
+	Add new filter function statsocial_filter_header_text_color
+----------------------------------------------
+Changelog -----------------------------------
+version:1.135
+Fixed
+	Fixed layout broken when add style rule font-size to body element
+Removed
+	backward-compatibility.php
+----------------------------------------------
+Changelog -----------------------------------
+version:1.134
+Modified
+    add filter
+
+----------------------------------------------
+Changelog -----------------------------------
+version:1.133
+Modified
+    add filter
+        statsocial_light_dark_bg
+        statsocial_light_light_bg
+        statsocial_light_color
+        statsocial_default_dark_bg
+        statsocial_default_light_bg
+        statsocial_default_color
+        statsocial_dark_dark_bg
+        statsocial_dark_light_bg
+        statsocial_dark_color
+
+        for wp_nav_menu(),body background, change brightness or darkness
+----------------------------------------------
+Changelog -----------------------------------
+version:1.132
+Modified
+    font style rule move from style.css to fonts.css
+        ( without media query font settings )
+
+    Note:h1,h2,h3 font-weight change from bold to normal
+        ( setting rule contain fonts.css )
+    Image file uploader add wp_verify_nonce check
+        lib/option-panel.php
+----------------------------------------------
+Changelog -----------------------------------
+version:1.131
+Added
+    Add new action hooks
+        do_action( 'statsocial_'. basename(__FILE__) );
+        date.php , page.php , image.php , search.php ,
+        front-page.php , front-portfolio.php ,
+        full-width.php and page-featured.php
+
+    for example
+
+        statsocial monthly archives is table listed
+        If you need normal loop list on Child Theme.
+
+        <code>
+
+        Add to Child Themes functions.php
+
+        add_action( 'statsocial_date.php', 'statsocial_fallback_template' );
+        function statsocial_fallback_template(){
+
+            get_template_part( 'index' );
+            exit;
+        }
+        </code>
+        Completely, operation in which the date.php template of the parent theme
+        did not exist is easily realizable.
+----------------------------------------------
+Changelog -----------------------------------
+version:1.130
+Fixed
+    Fixed visual issue entry title before featured image size.
+----------------------------------------------
+Changelog -----------------------------------
+version:1.129
+Added
+    Add page template page-featured.php
+----------------------------------------------
+Changelog -----------------------------------
+version:1.128
+Fixed
+    Fixed Wrong function name from month_list to statsocial_month_list
+        filter name change from month_list_post_count to statsocial_month_list_post_count
+    Fixed loop.php class attribute value improperly ( not spaced )Modified
+    seach result search form submit button position.
+
+----------------------------------------------
+Changelog -----------------------------------
+version:1.127
+
+Fixed
+    Fixed CSS Parse Error ( W3C CSS validator )
+Modified
+    Post format Status shows avatar when small screen.
+Removed
+    Function the_excerpt() removed from all templates without brank-front.php
+Added
+    The addition of the alternate function of the_excerpt()
+
+        functions.php line 454-503
+
+    /**
+     * the_content( ) or the_excerpt
+     *
+     * the_excerpt use where index,archive,other not single pages.
+     * If statsocial_USE_LIST_EXCERPT value false and use the_content .
+     *
+     * add ver 1.127
+     * When use excerpt please set $statsocial_where_excerpts
+     */
+        if ( ! defined( 'statsocial_USE_LIST_EXCERPT' ) ) {
+
+            define( "statsocial_USE_LIST_EXCERPT", false );
+        }
+
+        // values 'is_search', 'is_archive', 'is_category' ,'is_tax', 'is_tag' any conditional function name
+
+        if( ! isset( $statsocial_where_excerpts ) ) {
+
+            $statsocial_where_excerpts = array( 'is_search' );
+        }
+    /**
+     *
+     *
+     *
+     * @since 1.127
+     */
+        if ( ! function_exists( 'statsocial_detect_excerpt_condition' ) ) {
+
+            function statsocial_detect_excerpt_condition( ){
+
+                global $statsocial_where_excerpts;
+
+                if( statsocial_USE_LIST_EXCERPT !== true ) {
+
+                    return false;
+                }
+
+                if( ! empty( $statsocial_where_excerpts ) ) {
+
+                    foreach( $statsocial_where_excerpts as $excerpt ) {
+
+                        if( $excerpt() == true ){
+                            return true;
+                        }
+                    }
+                }
+
+                return false;
+            }
+        }
+
+        By this setup, I think that change became possible simply more freely.
+----------------------------------------------
+Changelog -----------------------------------
+version:1.126
+
+fixed
+    Fixed default sidebar search form shows list before WordPress 3.5.2
+        if smaller than WordPress 3.6 then not showing search form.
+    Fixed searchform.php html5 html structure not correct.
+        WAI ARIA role="search" move from input attribute to form attribute.
+modified
+    Modified Post format status
+        Change show posted on link at front page.
+            Care for microformats
+        get_avatar image modified for microformats at front page.
+----------------------------------------------
+Changelog -----------------------------------
+version:1.124
+
+fixed
+    Fixed monthly archive list element id broken.
+
+    Avatar image not contain alt attribute.
+        author.php
+modified
+    Add wpautop when showing 'Biographical Info' at author.php
+    function statsocial_entry_title()
+        modified title element changeable
+
+
+----------------------------------------------
+Changelog -----------------------------------
+version:1.123
+
+    Fixed
+        author.php
+            Table layout display improperly.
+        entry-blog.php
+            html add div close tag.
+    modified
+        author.php
+            add microformats
+        date.php
+            add microformats
+        comment form
+            remove area required when html5
+                Markup validation Service error
+                    Attribute aria-required not allowed on element textarea at this point.
+        lib/option-panel.php
+            statsocial_color_selector() add $scheme check.
+
+    Add filter
+
+        This filter can change Monthly Archive entry list count.
+
+        for example
+
+        add_filter( 'month_list_post_count', 'my_month_list_post_count' );
+
+        function my_month_list_post_count( $count ) {
+
+            return 10;
+        }
+----------------------------------------------
+Changelog -----------------------------------
+version:1.121
+    Add browser detection select var $statsocial_browser_detection
+        use server side browser detection or javascript browser ditection
+        default change server side( PHP ) to javascript browser detection for cached statsocial theme.
+
+    Add style rules for
+        .entry-content input[type="email"],
+        .entry-content input[type="text"],
+        .entry-content input[type=url],
+        .entry-content input[type=tel],
+        .entry-content input[type=number],
+        .entry-content input[type=color],
+----------------------------------------------
+Changelog -----------------------------------
+version:1.120
+
+    Fixed confuse template settings
+        Deleted header-html5.php template
+        Modified header.php template.
+            change xhtml to html5
+        Added header-xhtml template for document type xhtml 1.0
+
+    Fixed
+        body_class language class display improperly.
+    Modified
+        Add function statsocial_non_breaking_title
+            Entry title none breaking text breakable
+----------------------------------------------
+
+Changelog -----------------------------------
+version:1.119
+    modified
+        accessibility issues
+    Fixed
+        firefox browser image size improperly when table contain images
+        below element patturn overflow image
+
+        <table><tr><td><img /></td></tr></table>
+----------------------------------------------
+Changelog -----------------------------------
+version:1.118
+    Remove accesskey and tabindex
+
+    delete How to use NVDA reader. ver 1.116 from README.txt
+
+----------------------------------------------
+
+Changelog -----------------------------------
+version:1.117
+    Remove tag accessibility-ready
+
+The following theme tags are not allowed:
+- accessibility-ready
+See http://wordpress.org/themes/about/ for a complete list of approved theme tags.
+----------------------------------------------
+Changelog -----------------------------------
+version:1.116
+    modified
+        html meta element from charset attribute to http-equiv
+
+        page-templates/front-portfolio.php
+            Change,Display only has featured image post.
+            Add Pagenation.
+        searchform
+            Add label <label class="screen-reader-text" for="s">Search for:</label>
+        style.css
+            Try accessibility add accessibility-ready tag
+
+    add
+        function statsocial_link_unique( )
+        function statsocial_doc_type_settings_validate( )
+        function statsocial_accessibility_settings_validate( )
+        images/statsocial-nav-menu-expand.png
+        images/statsocial-nav-menu-shrunk.png
+        Add searchform default sidebar.
+
+        theme option
+            Accessibility Settings
+            Document Type Settings
+
+Note:
+    This version trying theme accessibility.
+
+    How to activate Accessibility mode.
+        Open statsocial option page.
+        Accessibility Settings value set to yes.( default no ).
+
+    accessibility checking tool
+        Functional Accessibility Evaluator 1.1
+        http://fae.cita.uiuc.edu/
+[var 1.118 deleted ]
+    How to use NVDA reader.
+        english version
+        http://www.nvaccess.org/
+        japanese version
+        http://sourceforge.jp/projects/nvdajp/
+
+        1. nvda start
+        2. Show WordPress blog with statsocial.
+        3. accesskey alt + s (chrome win) alt + shift + s (firefox) then searchform active.
+        4. enter tab key Please press the tab key several times.
+        5. focus entry then nvda read a content
+
+                enter then move to single.php ( nvda ) or
+                press tab key then move to current entry title ( for not nvda )                 and more press tab key move to next content ( back to shift + tab )
+[/ var 1.118 deleted ]
+----------------------------------------------
+Changelog -----------------------------------
+version:1.115
+    modified
+        function statsocial_install_navigation()
+            Theme data automatic change is supported at the time of site change.        header-front.php
+            Support Responsive
+        front-portfolio.php
+            The posts contain featured image shows 9
+        searchform.php
+            Add esc_url()
+        csscolor.css.php
+            Add gradient for IE10 at nav_menu
+    fixed
+        broser detect regex fail IE10
+----------------------------------------------
+Changelog -----------------------------------
+version:1.113
+    fixed Post Format posted in Display improperly on single.php
+----------------------------------------------
+Changelog -----------------------------------
+version:1.112
+    fixed Post Format Status Display improperly on single.php
+----------------------------------------------
+Changelog -----------------------------------
+version:1.111
+Added
+    Retina display support
+        Add file
+        new file:   images/please_upload.png
+        new file:   images/post-format-aside.png
+        new file:   images/post-format-audio.png
+        new file:   images/post-format-chat.png
+        new file:   images/post-format-gallery.png
+        new file:   images/post-format-image.png
+        new file:   images/post-format-link.png
+        new file:   images/post-format-quote.png
+        new file:   images/post-format-status.png
+        new file:   images/post-format-video.png
+        new file:   images/statsocial-chat-author-0.png
+        new file:   images/statsocial-chat-author-1.png
+        new file:   images/statsocial-chat-author-2.png
+        new file:   images/statsocial-chat-author-3.png
+        new file:   images/statsocial-chat-author-4.png
+        new file:   images/statsocial-chat-author-5.png
+        new file:   images/retina/info.png
+        new file:   images/retina/link.png
+        new file:   images/retina/next.png
+        new file:   images/retina/post-format-aside.png
+        new file:   images/retina/post-format-audio.png
+        new file:   images/retina/post-format-chat.png
+        new file:   images/retina/post-format-gallery.png
+        new file:   images/retina/post-format-image.png
+        new file:   images/retina/post-format-link.png
+        new file:   images/retina/post-format-quote.png
+        new file:   images/retina/post-format-status.png
+        new file:   images/retina/post-format-video.png
+        new file:   images/retina/previous.png
+        new file:   images/retina/statsocial-chat-author-0.png
+        new file:   images/retina/statsocial-chat-author-1.png
+        new file:   images/retina/statsocial-chat-author-2.png
+        new file:   images/retina/statsocial-chat-author-3.png
+        new file:   images/retina/statsocial-chat-author-4.png
+        new file:   images/retina/statsocial-chat-author-5.png
+        new file:   images/retina/require.png
+        new file:   images/retina/rss.png
+        new file:   images/retina/stop.png
+        new file:   images/wp3.jpg
+
+    Add support Post Format
+        'aside', 'chat', 'link', 'image', 'quote', 'video'
+    Add statsocial_post_class()
+    Add statsocial_chat_filter()
+    Add statsocial_chat_author_id()
+
+Removed
+        removed posted on, posted in, on Stiky Post
+
+Note: The display of the contents at the time of applying Post Format
+
+    When entry title is blank
+        Show Post format image link to single.php
+    When entry content is blank
+        posted on is hide and shows only comment link
+
+----------------------------------------------
+Changelog -----------------------------------
+version:1.110
+modified
+    posted on and posted in
+        correct word space. lang en_US
+----------------------------------------------
+Changelog -----------------------------------
+version:1.109
+modified
+    Correction of template coding
+    gettext change from __() to esc_html__()
+    Translation check using WP_LANG 'ja'
+    Remove file backward-compatibility.php
+----------------------------------------------
+Changelog -----------------------------------
+version:1.108
+fixed
+    Fixed Invalid argument supplied error.
+    function statsocial_loop_title()
+        add $page_title_c  = "";
+modified
+    Post Format Status Add  publish day link
+    Widget category archive ,monthly archive
+        background color change when color type dark.
+----------------------------------------------
+Changelog -----------------------------------
+version:1.107
+fixed
+    Fixed full size editor width display improperly when page width fluid.
+    Fixed Nested grid display improperly front-page.php + sticky widget area + text widget
+     example:
+        <div class="yui-gb">
+            <div class="yui-u first">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            </div>
+            <div class="yui-u">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            </div>
+            <div class="yui-u">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+        </div>
+----------------------------------------------
+Changelog -----------------------------------
+version:1.106
+fixed
+    Fixed Post format Status display improperly on index.php
+        style.css style rule chanage.
+modified
+    member functions prefixed.
+        option-panel.php class statsocial_menu_create
+    functions more readable.
+        functions.php
+added
+    add_theme_support( 'custom-header') add $args below
+        'admin-preview-callback' => 'statsocial_admin_header_image'
+        'admin-head-callback' => 'statsocial_admin_header_style'
+----------------------------------------------
+Changelog -----------------------------------
+version:1.104
+
+Warning: call_user_func_array() expects parameter 1 to be a valid callback, function 'statsocial_theme_support_setup' not found or invalid function name
+
+fixed
+    Fixed delete below code from functions.php line 176
+        add_action( 'after_setup_theme', 'statsocial_theme_support_setup' );
+
+It is thankful to xaotikdesigns who pointed out this bug.
+----------------------------------------------
+
+Changelog -----------------------------------
+version:1.103
+
+added
+    function statsocial_postmeta_cap()
+        User level 0-3 user cannot use custom field keyname 'css','meta','javascript'.
+modified
+    footer.php
+        Change from get_bloginfo('name') to $statsocial_current_theme_name
+        Change from 'http://www.tenman.info/wp3/statsocial' to $statsocial_current_data_theme_uri
+
+    functions.php
+        Add
+            $statsocial_current_data
+            $statsocial_current_data_theme_uri
+            $statsocial_current_data_author_uri
+            $statsocial_current_data_version
+            $statsocial_current_theme_name
+        Move files
+            hooks.php to functions.php
+
+            register_nav_menus()
+            add_theme_support()
+        Change hook
+            add_statsocial_stylesheet use wp_enqueue_scripts hook
+    csscolor.php,PEAR.php
+
+    Class name is changed
+        From CSS_Color to statsocial_CSS_Color
+            member functions prefixed
+        From PEAR to statsocial_PEAR
+            member functions prefixed
+Removed
+    PEAR.php
+         Merged lib/csscolor/csscolor.php
+
+----------------------------------------------
+version:1.102
+modified
+    Add IE version check $statsocial_fluid_minimum_width
+----------------------------------------------
+Changelog -----------------------------------
+version:1.101
+added
+    add_filter('widget_text','statsocial_ie_height_expand_issue');
+fixed
+    Fixed function statsocial_ie_height_expand_issue()
+        regex change
+            support <img attr... /> and <img attr... >
+    Tags title display twice when post format status.
+
+modified
+    style.css
+----------------------------------------------
+Changelog -----------------------------------
+version:1.100
+added
+    Sidebar widget title add element span
+        Handling of a title text is made easy on CSS work.
+    Add home link for Custom Header Image
+        If you not need link then
+        header-html5.php
+            change from statsocial_header_image( 'home_url' )
+                    to  statsocial_header_image( 'elements' ) //not link
+fixed
+    Fixed IE8 + color type 'light' display improperly.
+        A horizontal scroll bar stops operating.
+            lib/csscolor.css.php
+                comment out below body rule.
+                filter: progid:DXImageTransform.Microsoft.gradient();
+modified
+    CSS Property 'word-wrap' value break-word
+        From several users, the style a new line for is started in the middle of a word had interrogative voice.
+        In a tentative way, I remove this rule.
+        If there are any opinions, please give http://www.tenman.info/wp3/statsocial/ a comment.
+----------------------------------------------
+Changelog -----------------------------------
+version:1.009
+Fixed
+    Fixed IE + color type 'light' display improperly.
+        Thanks @Gonta
+    Fixed Can not remove custom header image.
+    Fixed Less than 640px width browser style issue.
+        Posted in display improperly where without home.
+    Fixed Extra Sidebar space issue when hide extra sidebar on loop pages( ex: index.php )
+Modified
+    From Comma separated values to only space where Posted in tags list and categoris list
+    Static Page support featured image.
+
+Add
+    Recent statsocial support responsive blog for modern browsers.
+    statsocial not support responsive for IE browser.
+    statsocial can display fluid layout for IE.
+    Add to conditional $statsocial_fluid_minimum_width value.
+
+        functions.php line:191
+
+        if( $is_IE ){
+            $statsocial_fluid_minimum_width = '640';
+        }
+
+----------------------------------------------
+Changelog -----------------------------------
+version:1.008
+Fixed
+    Fixed NOTICE: wp-content/themes/statsocial/functions.php:3033 - Undefined variable: uri
+    Fixed NOTICE: wp-content/themes/statsocial/functions.php:3946 - Undefined variable: calendar_output
+----------------------------------------------
+Changelog -----------------------------------
+version:1.007
+Fixed
+    Fixed no use getimagesize() another page width 750px,950px,974px        Change get_custom_header()
+----------------------------------------------
+Changelog -----------------------------------
+version:1.006
+Fixed
+    Fixed WARNING: wp-content/themes/statsocial/functions.php:3065 - Division by zero
+    Fixed NOTICE: wp-content/themes/statsocial/functions.php:3064 - getimagesize(): Read error!
+        Change function from getimagesize() to get_custom_header().
+    Fixed NOTICE: wp-content/themes/statsocial/functions.php:4238 - Undefined variable: is_IE
+        add global $is_IE
+    Fixed Use of variable in translation function in lib/option-panel.php, lines 755, 760, 793, 880. Translation function calls must NOT contain PHP variables.
+        Remove Translation.
+    Fixed While using the fluid width setting, the layout aligns itself to the left hand side in viewport widths greater than 1280px. Would be nice if it center aligns itself. [tip: using `margin: 0 auto;` instead of `margin: 0 2%;` for `#doc3` could fix this.]
+        Add media query
+
+        @media screen and (min-width : 1280px){
+            #doc3{
+                margin:0 auto;
+            }
+        }
+Modified
+        hooks.php Add if ( ! function_exists( 'statsocial_theme_setup' ) )
+            Customize easy For Child Theme
+----------------------------------------------
+Changelog -----------------------------------
+version:1.005
+Fixed
+    Fixed function statsocial_small_device_helper has bug
+        header image display improperly
+        when uploading files ‘Organize my uploads into month- and year-based folders’ checked
+
+    Fixed front-portfolio.php sticky post Wrong Coding.
+
+    Fixed reset-fonts-grids.css
+            white bar at the bottom of the page.
+                Thanks Paintballer
+
+
+----------------------------------------------
+Changelog -----------------------------------
+version:1.004
+modified
+    Theme options panel design change
+Fixed
+    Fixed Post format gallery has error when set post format gallery and no gallery item.
+    Fixed Post format status display improperly when window width less than 640px
+----------------------------------------------
+Changelog -----------------------------------
+version:1.003
+modified
+    Modified statsocial_loop_class()
+    Modified html5 figure elements add
+    Modified extra sidebar position css
+----------------------------------------------
+Changelog -----------------------------------
+version:1.001
+fixed
+    Fixed Custom Header Image works improperly when 'Organize my uploads into month- and year-based folders'.
+Add
+    Add function statsocial_featured_image().
+    Add statsocial_USE_FEATURED_IMAGE_LIGHT_BOX
+        The featured image light box  not shown by default.
+    New Template file for front page.
+        page-templates/front-portfolio.php
++----------------------------------------------
+Changelog -----------------------------------
+version:1.000
+fixed
+    Fixed header element end tag vanish when statsocial_show_menu_primary hide.
+modified
+    style.css
++----------------------------------------------
+Changelog -----------------------------------
+version:0.999
+
+modified
+    Document type change from xhtml1.0 to html5
+    if you need xhtml1.0
+        functions.php $statsocial_document_type = 'html5' change value from 'html5' to 'xhtml'.
+    Remove inline style( when page width 'fluid' ).
+    Change default page width from 'doc2' to 'fluid'.
+    Support Responsive layout when 'fluid'
+    Change $statsocial_fluid_minimum_width( functions.php line:181 ) value from 450 to 320
+added
+    New template file   header-html5.php
+----------------------------------------------
+Changelog -----------------------------------
+version:0.998
+
+added
+    Page template page-templates/header-front.php
+----------------------------------------------
+Changelog -----------------------------------
+version:0.997
+
+added
+    Page template page-templates/front-page.php
+    Page template page-templates/full-width.php
+fixed
+    Fixed nav menu children position when doc3 fluid layout.
+modified
+    modify statsocial new h1-h6 font size
+    language file modify
+----------------------------------------------
+Changelog -----------------------------------
+version:0.995
+fixed Child theme languages/css/WPLANG.css not work
+----------------------------------------------
+Changelog -----------------------------------
+fixed
+version:0.994
+    Fixed statsocial has Warning Error
+     typo functions.php line:4112
+     function name change
+        from obandes_mobile_meta to statsocial_mobile_meta
+----------------------------------------------
+Changelog -----------------------------------
+version:0.993
+
+added
+    The addition of new functionality.
+     Recent versins statsocial
+        Custom field name css is addition single post and page style rules.
+     New versins statsocial
+        The style described by the custom field css expresses each style
+        for each style correctly also a category and an archive page.
+
+        You only specify a class and an element and can create style rule.
+        statsocial adds the CSS specificity.
+
+    Added mobile meta tag when using fluid page width.
+----------------------------------------------
+Changelog -----------------------------------
+version:0.991
+
+fixed
+    Fixed miss coding
+        from    $page_title_c = get_the_date(get_option($statsocial_date_format));
+        to      $page_title_c = get_the_date( $statsocial_date_format );
+
+
+Added
+    Post formats support status and gallery.
+modified
+    Add post formats style rules.
+    Embed iframe elements style rules change where text widget.
+    remove height:auto;
+----------------------------------------------
+Changelog -----------------------------------
+version:0.990
+
+fixed
+    for example
+    [statsocial color_type="minimal" col="1"]
+    write with post or page (textarea)
+
+    Fixed Above short code like statsocial notation works improperly.
+    Attribute color_type not work
+
+    Fixed Correction of a translation character string
+     ( japanese )
+Added
+    Add Customizer Menu
+    class statsocial_Customize_Navigation_Control extends WP_Customize_Control
+
+----------------------------------------------
+
+Changelog -----------------------------------
+version:0.989
+fixed
+    Fixed Wrong theme_textdomain where __() , _e().
+modified
+    function change from load_textdomain() to load_theme_textdomain()
+----------------------------------------------
+Changelog -----------------------------------
+version:0.988
+fixed
+    Fixed Wrong theme_textdomain where __() , _e().
+modified
+    function change from load_textdomain() to load_theme_textdomain()
+----------------------------------------------
+Changelog -----------------------------------
+version:0987
+
+fixed
+    Fixed duplicate wp_list_pages menu
+        This problem was pointed out Faelandaea ,I appreciate.
+modified
+    Support  post-formats
+        you can use has_post_format( )
+----------------------------------------------
+
+Changelog -----------------------------------
+version:0985
+
+fixed
+    Theme Customizer works improperly.
+
+    Fixed Not Work.
+            Background Repeat,
+            Background Position,
+            Background Attachment
+----------------------------------------------
+Changelog -----------------------------------
+version:0.984
+
+added
+    statsocial_monthly_archive_prev_next_navigation()
+        Add next prev month navigation where  monthly archive( date.php)
+    statsocial_customize_controls_print_styles()
+        Add  color type screen shot where theme customizer.
+    $statsocial_add_class
+        Add Sticky post display controll.
+
+        If Blog pages show at most is 10 and sticky post next page then shows the sticky post.
+        Change Sticky post display once.
+
+
+----------------------------------------------
+Changelog -----------------------------------
+version:0.983
+    This version changes for CSS
+
+modified
+    color type w3standard CSS modify
+        Remove CSS3 , CSS2.1 valid
+fixed
+    Fixed Custom header image CSS bug
+Note:
+    When color type w3standard
+        Remove CSS light box.
+----------------------------------------------
+Changelog -----------------------------------
+version:0.982
+    0.981 contain Fixed is not appropriate
+fixed
+    Fixed Stupid 0.981 Fixed Not clesed element div.hfeed
+        It returned.
+----------------------------------------------
+Changelog -----------------------------------
+version:0.981
+    This version changes for HTML bug fix
+fixed
+    Fixed Not clesed element div.hfeed
+        footer.php
+    Fixed statsocial_add_body_class output class 'array' when multisite.
+        functions.php
+    Fixed underfined val $hrml, change from $hrml to $html.
+        functions.php
+----------------------------------------------
+Changelog -----------------------------------
+version:0.980
+    This version changes for Structure which can do customization simply.
+    Note:
+    functions.php line:20
+     $statsocial_actions_hook_message = false;
+        WP_DEBUG need true.
+        and When value change true then show action_hook point and message.
+        You can customize the statsocial very Easy.
+    blank_front.php
+        for front page template.
+         You not need  PHP skills , WordPress template functions knowledge.
+         Only y or '' settings, Please try.
+added
+    New functions
+        statsocial_prepend_doc()
+        function statsocial_after_nav_menu()
+        statsocial_prepend_entry_content()
+        statsocial_append_entry_content
+        statsocial_prepend_extra_sidebar( )
+        statsocial_append_extra_sidebar()
+        statsocial_prepend_default_sidebar()
+        statsocial_append_default_sidebar()
+        statsocial_prepend_footer()
+        statsocial_append_footer()
+        statsocial_append_doc()
+        function insert_message_action_hook_position()
+        function statsocial_action_hook_messages()
+        statsocial_entry_title()
+        statsocial_entry_content()
+        statsocial_next_prev_links()
+        statsocial_sidebar_menus()
+        statsocial_recent_posts( )
+        statsocial_category_posts()
+        statsocial_tag_posts()
+        statsocial_sidebar_menus()
+----------------------------------------------
+Changelog -----------------------------------
+version:0.979
+fixed
+    Fixed Waring Error statsocial option Upload image
+        When upload image success and image max size check.
+        Add file existance check.
+            option-panel.php
+Add
+    function statsocial_custom_link_color()
+    function statsocial_enqueue_comment_reply()
+        Add function exists check.
+    Support WordPress random-uploaded-image
+----------------------------------------------
+Changelog -----------------------------------
+version:0.977
+    This version changes Bug fixed for Child theme
+fixed
+    statsocial_fallback_title()
+        When child theme fallback image uri missing.
+    statsocial_small_device_helper()
+        When child theme script error.
+    statsocial_design_output()
+        When child theme image uri missing.
+    theme options page textarea remove for CSS edit
+        please readme.txt
+----------------------------------------------
+Changelog -----------------------------------
+version:0.975
+modified
+    typo
+    var name change
+        from $statsocial_fluid_minimam_width to $statsocial_fluid_minimum_width
+        from $statsocial_fluid_maximam_width to $statsocial_fluid_maximum_width
+
+    get_current_theme(),wp_get_theme() changes global var $statsocial_current_theme_name
+    get_theme_data() changes global var $statsocial_theme_data
+
+fixed
+        When Browser width > $statsocial_fluid_maximum_width
+            Change  from display page left side to display center
+                using javascript see functions.php line 3010.
+
+----------------------------------------------
+Changelog -----------------------------------
+version:0.974
+fixed
+    Fixed Script Error
+        Warning: Illegal offset type in /home/alianza1/public_html/wp-content/themes/statsocial/functions.php on line 906
+        functions.php
+
+    Fixed Child theme display improperly.
+        Custom header image, #hd background image,#ft background image
+        csscolor.css.php
+        functions.php
+
+----------------------------------------------
+
+Changelog -----------------------------------
+version:0.973
+    This version changes for Bugfix
+        MultiSite header image display improperly.
+fixed
+    function statsocial_header_image()
+    function statsocial_small_device_helper()
+        functions.php
+----------------------------------------------
+Changelog -----------------------------------
+version:0.971
+    This version changes for WordPress 3.4 support.
+added
+    function statsocial_custom_link_color()
+    function statsocial_hyperlink_color_validate()
+    function statsocial_small_device_helper()
+        functions.php
+            for header-image size controll and primary navigation menu when fluid layout right side childrens children list show left
+    function statsocial_customize_register()
+        functions.php
+            for WordPress 3.4
+modified
+    add global var $statsocial_wp_version, $statsocial_current_theme_name
+
+    Inline style remove
+            footer.php
+            header.php
+            statsocial_header_image()
+            statsocial_site_title()
+    modify etc
+        lib/alias_functions.php
+        lib/csscolor.css.php
+        lib/hooks.php
+        lib/option-panel.php
+        style.css
+        css3.css
+        fallback.css
+
+        single.php
+            Add CSS lightbox for post thumbnail shows not croped view ( Not support IE )
+
+    Theme options page add links
+        Add Theme customizer link ,
+        Custom Header link,
+        Custom Background link,
+        Widget link,
+        Menus link ,
+        Theme Editor link
+
+        Reset All Settings
+            Add remove_theme_mods();
+New file
+    backward-compatibility.php
+    Move from functions.php to this for WordPress ver3.3 old functions
+----------------------------------------------
+Changelog -----------------------------------
+version:0.964
+
+modified
+    Change theme options page context help.
+        lib/option-panel.php
+        functions.php
+fixed
+    Fixed sub sup elements display improperly.
+        style.css
+----------------------------------------------
+Changelog -----------------------------------
+version:0.963
+
+fixed
+    Fixed WordPress publish time format displays improperly
+        statsocial_posted_on()
+            functions.php
+
+modified
+    Add columns class
+            css3.css
+    var $statsocial_fluid_minimam_width value change
+        from 480 to 481
+            functions.php
+    define statsocial_HEADER_BACKGROUND_COLOR,statsocial_HEADER_BACKGROUND_IMAGE
+            functions.php
+    Add if(function_exists(' wp_get_theme')) check
+        The transient measure to upgrade
+        switch get_current_theme() to wp_get_theme()
+            functions.php
+            lib/option-panel.php
+    Add statsocial_add_body_class()
+        user id class move from index.php to functions.php
+
+    Add add_filter( 'statsocial_is_fixed' , '__return_false' );
+    and add_filter( 'statsocial_embed_meta_css', '__return_false' );
+        modify add_statsocial_stylesheet()
+        functions.php
+    modify stylesheet.css
+            sidebar option elements style
+    Add add_action( 'after_setup_theme', 'statsocial_theme_setup' )
+    and function statsocial_theme_setup()
+            hooks.php
+----------------------------------------------
+Changelog -----------------------------------
+version:0.962
+fixed
+    Fixed Wrong coding
+        from    add_filter('statsocial_is_fixed' ,__return_false());
+        to      add_filter( 'statsocial_is_fixed' , '__return_false' );
+            functions.php
+----------------------------------------------
+Changelog -----------------------------------
+version:0.961
+fixed
+    Fixed Undefined index: statsocial_style_type
+modified
+    loop.php
+        from    the_content();
+        to      the_content( __( 'Continue&nbsp;reading&nbsp;<span class="meta-nav">&rarr;</span>', 'statsocial' ) );
+----------------------------------------------
+Changelog -----------------------------------
+version:0.960
+fixed
+    Fixed wrong attribute name.
+        from    <div style="entry-content">
+        to      <div class="entry-content">
+        blank_front.php, page.php
+    Fixed heading display improperly
+        Example
+        <h2>title</h2> , <h2><a href="#">title</a></h2>
+        Not same text size
+        Style rule change.
+            style.css
+modified
+    Add style rule class 'columns' where css3.css
+    Add wp_deregister_style('style')
+        where function fallback_user_interface_view()
+            functions.php
+    Style rule clean up
+        style.css
+----------------------------------------------
+Changelog -----------------------------------
+version:0.959
+fixed
+    Fixed html comment out not closed
+made
+    blank_front.php
+        for custom front page create easy
+----------------------------------------------
+Changelog -----------------------------------
+version:0.958
+
+moved
+
+added
+    Added var $statsocial_fluid_maximam_width
+        Limit a page width when display fluid layout
+    Added functions
+        statsocial_fallback_human_interface()
+        small_screen_check()
+        fallback_user_interface_view()
+            statsocial fluid layout view is 480px - 1280px support
+            View supply for more thin width browser
+    Note:functions.php
+    $statsocial_fallback_human_interface_show = true when if you want display this view
+fixed
+    Fixed Fluid layout minimam width display inproperly
+modified
+    CSS style rule modified
+made
+    fallback.css
+----------------------------------------------
+Changelog -----------------------------------
+version:0.957
+
+moved
+
+added
+
+fixed
+    Fixed IE8 menu display inproperly.
+        Not show level3 when level2 hover
+         #access ul ul :active >a
+          Comment out filter: progid:DXImageTransform.Microsoft.gradient
+modified
+
+made
+
+----------------------------------------------
+Changelog -----------------------------------
+version:0.956
+
+moved
+    add_image_size( 'single-post-thumbnail'...)
+        from hook.php to functions.php
+    from    hard coded wp_enqueue_script( 'comment-reply' )
+    to      add_action( 'wp_enqueue_scripts', 'statsocial_enqueue_comment_reply' )
+
+added
+    enqueue_comment_reply() filter function
+    add_filter('wp_title','statsocial_filter_title',10,3)
+
+fixed
+    Fixed Use of undefined constant
+        statsocial_SINGLE_POST_THUMBNAIL_WIDTH
+        statsocial_SINGLE_POST_THUMBNAIL_HEIGHT
+    Fixed Auto embed (oembed) media display impropaly
+modified
+    footer.php
+        add class clear
+    Change site title function
+        from statsocial_wp_title() to wp_title()
+        and add statsocial_filter_title()
+made
+
+----------------------------------------------
+Changelog -----------------------------------
+version:0.954
+fixed
+    Fix Display inproperly where single.php and page.php lost a column.
+     statsocial_show_one_column() return value impropely when loops after.
+----------------------------------------------
+Changelog -----------------------------------
+version:0.953
+added
+    functions.php
+        Add var $statsocial_document_type.
+
+fixed
+    sidebar-extra.php
+        Fix $wp_query->posts is empty when search result none and $wp_query->post->ID is error.
+        Fix const statsocial_USE_LIST_EXCERPT not works.
+
+modified
+    All template files
+        template function from get_header('xhtml1') to get_header( $statsocial_document_type )
+        template function from get_footer() to get_footer( $statsocial_document_type )
+    loop.php
+        use get_template_part('part','gallery')
+        use  get_template_part('part','blog')
+----------------------------------------------
+Changelog -----------------------------------
+version:0.952
+fixed
+    Footer.php HTML code change.
+        if is_active_sidebar return false then no echo widget ul elements of HTML.
+    csscolor.css.php
+            Using improperly function
+            from get_template_part() to locate_template()
+            get_template_part() must not call sub directory template part file.
+    comments.php
+            Conflict id attribute value, nav-above and nav-below comments paging navigation and article navigation.
+            Change comments #nav-above to #nav-above-comments and #nav-below to #nav-below-comments.
+modified
+    images: all images must have their license explicitly declared
+        Theme images list create and add readme.txt
+    arrows-vs.png, icons32-vs.png
+        Design change
+----------------------------------------------
+Changelog -----------------------------------
+version:0.950
+fixed
+    Coding missing
+        Delete var $statsocial_document_type.
+        Add $statsocial_included_files = get_included_files();
+            functions.php
+    Fix display improperly when child theme where theme options page    Fix admin-option.css impropely when child theme.
+added
+    Add function_exists check where function statsocial_delete_post_link why child theme happiness
+
+----------------------------------------------
+Changelog -----------------------------------
+version:0.948
+
+moved
+    Remove file license.txt
+        A license is expressed by URL.
+added
+     function statsocial_delete_post_link();
+        Added with each edit_post_link where template files.
+            Note:
+            This function default no echo.
+            Need statsocial_SHOW_DELETE_POST_LINK set true where functions.php
+     Add apply filters
+        statsocial_custom_width, statsocial_is_fluid, statsocial_is_fixed, statsocial_posted_in, statsocial_posted_on, statsocial_warehouse, statsocial_gradient_single, statsocial_gradient, statsocial_comment_form, statsocial_prev_next_post
+
+fixed
+    Impropaly comment change all template.
+         Change from @package WordPress, @subpackage statsocial
+                to  @package statsocial
+    function statsocial_content_width_clone
+        Fixed return improperly value.(when fruid layout doc3)
+    Template part file  loop.php
+        Thumnail image display impropaly when image not exists
+            Add image exists check.
+
+modified
+    lib/csscolor.css.php
+        add style rules
+    lib/csscolor/PEAR.php, lib/csscolor/csscolor.php, README.txt
+        Add license
+made
+    lib/hooks.php
+        Sepalate add_filter and add_actions from functions.php
+            For child theme customize easy
+
+----------------------------------------------
+Changelog -----------------------------------
+version:0.947
+
+moved
+    function statsocial_admin_print_styles
+        moved to class statsocial_menu_create member function
+added
+    function statsocial_admin_in_toolbar
+        Add Theme options link where Admin bar
+fixed
+    const statsocial_USE_AUTO_COLOR
+    Theme options page display improperly when the value set false
+made
+    New file    admin-options.css
+    New file    images/options/arrows-vs.png
+    New file    images/options/icons32-vs.png
+
+----------------------------------------------
+Changelog -----------------------------------
+version:0.946
+
+added
+    function statsocial_admin_print_styles
+fixed
+    function statsocial_install_navigation
+        get_option value return false when install.
+modified
+    statsocial options page CSS change.
+----------------------------------------------
+Changelog -----------------------------------
+version:0.945
+
+fixed
+    style.css
+        The style rule which indicates a managed bar unsuitable
+    lib/csscolor.css.php
+        Comment display improperly where color type dark
+            The style rule change
+----------------------------------------------
+Changelog -----------------------------------
+version:0.943
+fixed
+    function statsocial_add_body_class() where functions.php
+        $color_type value impropaly
+    function statsocial_gradient_clone() where  /lib/alias_functions.php
+        Display link color impropaly
+    function statsocial_admin_header_style() where functions.php
+        Display class color1-color5 color-1-color-5  color impropaly
+        Add return value statsocial_admin_header_style()
+    function statsocial_color_base() where /lib/csscolor.css.php
+        Display class color1-color5 color-1-color-5 chile hyperlink color impropaly
+
+modified
+    statsocial_add_body_class
+        Add class browser language e.g. accept-lang-ja
+----------------------------------------------
+Changelog -----------------------------------
+version:0.942
+fixed
+    remove var $statsocial_content_check
+----------------------------------------------
+Changelog -----------------------------------
+version:0.941
+fixed
+    CSS rule display impropaly where Site Title background.
+    csscolor.css.php and style.css
+modified
+    language file ja.po ja.mo modified
+    CSS rules specification check and modify
+----------------------------------------------
+Changelog -----------------------------------
+version:0.940
+moved
+    single.php
+        remove conditional code by category
+        It is blog,gallery and default, it will be include from template part files.
+added
+    Add function statsocial_show_one_column() where functions.php
+    Add function statsocial_color_type_custom() where functions.php
+modified
+    CSS rule modify where lib/csscolor.css.php and style.css
+    page.php and single.php
+        By page edit and post edit,
+        the Color Type and the number of columns can be set to contribution.
+        see:README.txt
+made
+    Template part file
+        part-blog.php
+        part-gallery.php
+        part.php
+----------------------------------------------
+Changelog -----------------------------------
+version:0.939
+modified
+   Files header comment modify
+fixed
+   Loose include path where functions.php works improperly
+   Apply_filters not work remove from functions.php,lib/csscolor.css.php
+   Add apply_filters where function statsocial_warehouse_clone
+   Get id value from $post->ID to the_ID() where loop.php, search.php
+   Conditionals to find the front page from is_home() to is_front_page() where sidebar-default.php,sidebar.php
+   function_exists check remove from add_custom_image_header where functions.php
+   header image display improperly (image height)
+----------------------------------------------
+Changelog -----------------------------------
+version:0.938
+
+fixed
+    header image display improperly (image height)
+    Color type minimal display header image improperly.(canot show image)
+    A fatal error occurs when statsocial_USE_AUTO_COLOR == false
+    statsocial option panel statsocial color scheme display improperly when statsocial_USE_AUTO_COLOR == false
+----------------------------------------------
+Changelog -----------------------------------
+version:0.936
+fixed
+    Child theme display improperly
+    when file not exists header image
+    when file not exists footer image
+modified
+    when file not exists reset-fonts-grids.css
+    when file not exists grids.css
+    when file not exists fonts.css
+    when file not exists languages/css/[language].css'
+    when file not exists statsocial.js
+    when file not exists lib/alias_functions.php
+    when file not exists images directory
+
+----------------------------------------------
+Changelog -----------------------------------
+version:0.935
+fixed
+    Child theme display improperly
+    when file not exists reset-fonts-grids.css
+    when file not exists grids.css
+    when file not exists fonts.css
+    when file not exists languages/css/[language].css'
+    when file not exists statsocial.js
+    when file not exists lib/alias_functions.php
+    when file not exists images directory
+
+---------------------------------------------
+Changelog -----------------------------------
+version:0.933
+moved
+    Required
+    Shortcodes should be made into a Plugin, rather than embedded into the Theme
+    Theme has required issues, but can be addressed in the next Theme revision
+    remove file lib/shortcodes.php
+---------------------------------------------
+Changelog -----------------------------------
+version:0.932
+moved
+    remove stylesheet description
+
+/** If you needs original settings
+ * 1. Only needs CSS rule customize
+ *  Create a file WPLANG css e.g. en_US.css and add custom CSS rule
+ * 2. functions.php templates.php and etc customize
+ *  1.  Copy all of files Theme statsocial and Rename from statsocial to Your child theme name
+ *  2.  Add new line 'Template:statsocial' where statsocial stylesheet header (the first few lines of the stylesheet)
+ *  3.  Add new line e.g. 'Template Version:0.931' (0.931 is version of parent statsocial )where statsocial stylesheet header (the first few lines of the stylesheet)
+ */
+---------------------------------------------
+Changelog -----------------------------------
+version:0.931
+moved
+    fixed
+        Impropely comment is changed All files
+        It changes so that the child theme which copied and renamed all the files may also operate.
+    Add for child theme issue
+        file lib/alias_functions.php
+            modified
+                this function is changed alias function
+                    statsocial_content_width
+                    statsocial_warehouse
+                    statsocial_gradient_single
+                footer.php
+                    Child theme name show properly
+    modified
+        template customize easier
+            Add
+                function
+                    statsocial_header_image
+                    statsocial_site_description
+                    statsocial_site_title
+                    statsocial_wp_title
+----------------------------------------------
+Changelog -----------------------------------
+version:0.930
+moved
+    fixed
+        statsocial option panel
+         fragment identifier change from #wphead to #wpwrap
+    made
+        file add    lib/option-panel.php
+         Move statsocial options functions from functions.php to option-panel.php
+        file add    lib/shortcode.php
+         Add shortcodes script.
+    #modified
+        functions.php
+            Cleaning PHP codes.
+----------------------------------------------
+Changelog -----------------------------------
+version:0.928
+moved
+    Remove editor-menu.js
+    Remove Tiny Mce Visual Editor Menu
+----------------------------------------------
+Changelog -----------------------------------
+version:0.925
+fixed
+    Function statsocial_fallback_title makes display dirty where Media Library page attached to title.
+     Do not add fallback html when is_admin().
+----------------------------------------------
+Changelog -----------------------------------
+version:0.924
+fixed
+    h1 Site Title style COLOR bug fix
+     Cannot readable color when get_theme_mod() return 'blank',''.
+added
+    Tiny Mce Visual Editor Menu Add
+    function statsocial_fallback_title
+made
+    editor_menu.js
+    fallback value add when entry title is blank.
+----------------------------------------------
+
+Changelog -----------------------------------
+version:0.921
+modified
+    It changes so that a Admin Header Image can be displayed normally.
+----------------------------------------------
+
+Changelog -----------------------------------
+version:0.919
+
+moved
+    comment out PHP code page.php   'parent child links' micro navigation.
+fixed
+    Issue   : Embed header style display like this input[type=\"reset\"].
+    Fix     : Change it is displayed like this input[type="reset"]
+add
+    Add comment link where posted on area.
+----------------------------------------------
+Changelog -----------------------------------
+version:0.918
+
+fixed
+    Textarea is not correct when select color type 'statsocial' where statsocial options page.
+----------------------------------------------
+
+Changelog -----------------------------------
+version:0.917
+
+fixed
+    Layout is broken where menu mouseover the hyperlink when IE9 standard mode.
+----------------------------------------------
+Changelog -----------------------------------
+version:0.916
+
+fixed
+    variables add prefix
+    `$fluid_or_fixed` to $statsocial_fluid_or_fixed,
+    `$page_width` to $statsocial_page_width,
+    `$fluid_minimam_width` to $statsocial_fluid_minimam_width,
+modified
+    statsocial options change menu oder.
+----------------------------------------------
+Changelog -----------------------------------
+version:0.914
+modified
+    functions.php
+        statsocial setting page user interface
+        description change
+
+Changelog -----------------------------------
+version:0.913
+fixed
+    functions.php
+        update error fix
+
+        This update error occurred by e.g. phpfog
+
+        Change csscolor/ require conditional
+        and is_admin() == true to is_user_logged_in()
+
+Changelog -----------------------------------
+version:0.911
+modified
+    functions.php
+    text change.
+    Base Color for Automatic Color Arrangement
+    link text change
+    MultiSite User must Click here !!
+    readme.txt
+    delete Install description
+    add
+    MultiSite user must click the link when setting change where  with update result message.
+    Japanese translation bug fix
+----------------------------------------------
+Changelog -----------------------------------
+version:0.910
+fixed
+    functions.php
+    languages/ja.po
+    languages/ja.mo
+    Japanese translation bug fix
+----------------------------------------------
+Changelog -----------------------------------
+version:0.909
+
+modified
+    functions.php
+    Admin panel image upload form i18n modify
+----------------------------------------------
+Changelog -----------------------------------
+version:0.908
+
+added
+    footer.php
+        add footer inline style
+    functions.php
+        add reset button
+        header,footer background image uploader
+    header.php
+        add header inline style
+fixed
+    functions.php
+    Missing statsocial domain for translatable strings fix
+    style.css
+        right sidebar to lose UL LI style fix
+
+modified
+    style.css
+    Add space between to image and post content - image attached.
+    csscolor.css.php
+    div.comment-body *,div.comment-author,div.comment-author-meta,
+    remove background from dark color type
+    functions.php
+    default header image and footer image set.
+----------------------------------------------
+Changelog -----------------------------------
+version:0.906
+added
+    Add current Automatic Color can edit option
+    AdminPanel ColorType select a statsocial and click submit button.    Appear Textarea and you can edit stylesheet.
+
+    functions.php
+            Setup_statsocial() change action only install once
+
+            Admin panel conditional view change when color type statsocial
+            Admin panel textarea add for stylesheet
+modified
+        Class gradient view issue anchortext contrast modifed
+        functions.php
+            $g .= '.gradient'.$i.' a{';
+            $g .= 'color:'.statsocial_colors($i-1,'color').';';
+            $g .= "}\n";
+----------------------------------------------
+Changelog -----------------------------------
+version:0.905
+fixed
+    functions.php
+        Child theme issue
+        Const HEADER_IMAGE change value.
+            template directory/images/headers/ to stylesheet directory/images/headers/
+        Var name change.
+            $statsocial_base_setting
+            register_default_headers default url , thumnail_url change.
+
+        It can freely layout and design on Child theme.
+modified
+    index.php
+        Browser view issue
+        Class topsidebar do not show html block when sidebar is not active.
+----------------------------------------------
+Changelog -----------------------------------
+version:0.904
+fixed
+    bug
+    page.php line:24
+        change ver name $ancestor to $statsocial_ancestor
+added
+    function
+    functions.php line:2797
+        statsocial_import_post_meta()
+----------------------------------------------
+Changelog -----------------------------------
+version:0.903
+modified
+    style.css line:110
+        add style
+        Category blog when listed article issue image after headding is not float
+----------------------------------------------
+Changelog -----------------------------------
+version:0.902
+
+fixed
+    bug functions.php line:740
+        $array = statsocial_register_styles();
+        to
+        $array = statsocial_register_styles($input);
+----------------------------------------------
+Changelog -----------------------------------
+version:0.901
+modified
+     functions.php
+        function statsocial_style_type_validate code modified why Child theme customize easier.
+     csscolor.css.php
+        function name change e.g. statsocial_dark to statsocial_indv_css_dark
+        Add statsocial_register_styles themename allways.
+             Child theme developer can create function statsocial_indv_css_ChildThemeName,
+             It will be create 'color type' and can select Theme options panel.
+
+            function statsocial_indv_css_ChildThemeName is return style string.
+            this return value are embed html document style.
+----------------------------------------------
+Changelog -----------------------------------
+version:0.900
+
+moved
+    const statsocial_COLOR_SCHEME remove.
+
+added
+    statsocial Option panel Color Scheme add
+    statsocial Option panel auto gradient visible where 'statsocial' background gradient.
+    csscolor.css.php add function statsocial_register_styles.
+fixed
+    Child theme issue fix
+        Child style.css can not read ploblem.
+    Option page link name fix
+        statsocial Option to ChildTheme Option change.
+modified
+    css3.css form button size modified.
+    Child theme StyleSheet(yui-grid,reset,more) Customizing easier.
+        e.g. function add_statsocial_stylesheet(){} can define on childtheme.
+
+    If Child theme have not header embed style (csscolor.css.php function dark(),function light()...) when required function w3standard() where functions.php.
+
+made
+    Color Scheme add 'animation color','Japan','USA','WWW'
+
+----------------------------------------------
+#Changelog -----------------------------------
+#version:
+#
+#moved
+#
+#added
+#
+#fixed
+#
+#modified
+#
+#made
+#
+#----------------------------------------------

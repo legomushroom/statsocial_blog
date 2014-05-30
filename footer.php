@@ -1,50 +1,74 @@
 <?php
 /**
- * The template for displaying the footer.
+ * The template part file for footer.
  *
- * Contains the closing of the id=main div and all content
- * after.  Calls sidebar-footer.php for bottom widgets.
  *
- * @package Pilcrow
- * @since Pilcrow 1.0
+ * @package statsocial
+ * @since statsocial 0.1
+ *
+ * @uses wp_upload_dir( )
+ * @uses statsocial_upload_image_parser( $footer_image_uri, 'inline','#ft' )
+ * @uses is_active_sidebar( 'sidebar-4' )
+ * @uses get_bloginfo( 'name' )
+ * @uses get_bloginfo( 'rss2_url' )
+ * @uses ucwords( )
+ * @uses wp_footer( )
+ * @uses statsocial_prepend_footer( )
+ * @uses statsocial_append_footer( )
+ * @uses statsocial_append_doc( )
  */
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+global $statsocial_current_theme_name, $statsocial_current_data_theme_uri, $template, $statsocial_accessibility_link;
+do_action( 'statsocial_pre_part_' . basename( __FILE__, '.php' ) . '_' . basename( $template ) );
 ?>
+<<?php statsocial_doctype_elements( 'div', 'footer' ); ?> id="ft" class="clear" <?php statsocial_doctype_elements( '', 'role="contentinfo"' ); ?>>
+<?php statsocial_prepend_footer(); ?>
+<!--footer-widget start-->
+<div class="widget-wrapper clearfix">
+    <?php if ( is_active_sidebar( 'sidebar-4' ) ) { ?>
+        <ul>
+            <?php dynamic_sidebar( 'sidebar-4' ); ?>
+        </ul>
+    <?php }//end if ( is_active_sidebar( 'sidebar-4' ) )  ?>
+    <br class="clear" />
+</div>
+<!--footer-widget end-->
+<address>
+    <?php
+    $statsocial_address_html = '<small>&copy;%s &nbsp; %s &nbsp;
+								<a href="%s" class="entry-rss">%s</a> <span>' . esc_html__( 'and', 'statsocial' ) . '</span> 
+								<a href="%s" class="comments-rss">%s</a>';
+    if ( $statsocial_accessibility_link == true ) {
 
-		</div><!-- #content-box -->
+        $accessible_url = statsocial_current_url();
 
-		<div id="footer" role="contentinfo">
-			<div id="colophon">
+        $accessible_url = add_query_arg( 'friendly', 'true', $accessible_url );
 
-				<?php
-					/* A sidebar in the footer? Yep. You can can customize
-					 * your footer with two columns of widgets.
-					 */
-					get_sidebar( 'footer' );
-				?>
+        $statsocial_address_html .= '<a href="' . $accessible_url . '" class="statsocial-accessibility-link">'. esc_html__( 'Accessible', 'statsocial' ). '</a>';
+    }
 
-				<div id="site-info">
-					<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> &middot; <?php bloginfo( 'description' ); ?>
-				</div><!-- #site-info -->
+    $statsocial_address_html .= '</small>&nbsp;';
 
-				<div id="site-generator">
-					<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'pilcrow' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'pilcrow' ), 'WordPress' ); ?></a>
-					&middot;
-					<?php printf( __( 'Theme: %1$s by %2$s.', 'pilcrow' ), 'Pilcrow', '<a href="http://automattic.com/" rel="designer">Automattic</a>' ); ?>
-				</div><!-- #site-generator -->
+    printf( $statsocial_address_html, date( "Y" ), $statsocial_current_theme_name, get_bloginfo( 'rss2_url' ), esc_html__( "Entries RSS", "statsocial" ), get_bloginfo( 'comments_rss2_url' ), esc_html__( 'Comments RSS', "statsocial" )
+    );
 
-			</div><!-- #colophon -->
-		</div><!-- #footer -->
-	</div><!-- #page .blog -->
-</div><!-- #container -->
+    if ( is_child_theme() ) {
 
-<?php
-do_action( 'pilcrow_after' );
+        $statsocial_theme_name = 'Child theme ' . esc_html( ucwords( $statsocial_current_theme_name ) ) . ' of ' . esc_html__( "statsocial Theme", "statsocial" );
+    } else {
+        $statsocial_theme_name = esc_html__( "statsocial Theme", "statsocial" );
+    }
 
-/* Always have wp_footer() just before the closing </body>
- * tag of your theme, or you will break many plugins, which
- * generally use this hook to reference JavaScript files.
- */
-wp_footer();
-?>
+    printf( '&nbsp;<small><a href="%s">%s</a></small>&nbsp;&nbsp;', $statsocial_current_data_theme_uri, $statsocial_theme_name
+    );
+    ?>
+</address>
+<?php statsocial_append_footer(); ?>
+</<?php statsocial_doctype_elements( 'div', 'footer' ); ?>>
+<?php statsocial_append_doc(); ?>
+</div>
+<?php wp_footer(); ?>
 </body>
-</html>
+</html><?php do_action( 'statsocial_after_part_' . basename( __FILE__, '.php' ) . '_' . basename( $template ) ); ?>

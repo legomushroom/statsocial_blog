@@ -1,25 +1,66 @@
 <?php
 /**
- * The template for displaying 404 pages (Not Found).
+ * The template for displaying 404 pages ( Not Found ).
  *
- * @package Pilcrow
- * @since Pilcrow 1.0
+ *
+ * @package statsocial
+ * @since Raindrop 0.1
+ *
+ * @uses statsocial_prepend_default_sidebar( )
+ * @uses statsocial_append_default_sidebar( )
  */
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
 
-get_header(); ?>
+get_header( $statsocial_document_type );
 
-<div id="content-container">
-	<div id="content" role="main">
+do_action( 'statsocial_pre_' . basename( __FILE__ ) );
 
-		<div id="post-0" class="post error404 not-found">
-			<h1 class="entry-title"><?php _e( 'Not Found', 'pilcrow' ); ?></h1>
-			<div class="entry entry-content">
-				<p><?php _e( 'Apologies, but the page you requested could not be found. Perhaps searching will help.', 'pilcrow' ); ?></p>
-				<?php get_search_form(); ?>
-			</div><!-- .entry-content -->
-		</div><!-- #post-0 -->
+statsocial_debug_navitation( __FILE__ );
+?>
+<div id="yui-main">
+    <div class="yui-b">
+        <div class="<?php echo statsocial_yui_class_modify(); ?>" id="container">
+            <div class="yui-u first<?php statsocial_add_class( 'yui-u first', true ); ?>" <?php statsocial_doctype_elements( '', 'role="main"' ); ?>>
+                <h1 class="entry-title">
+<?php esc_html_e( 'Error 404 - Not Found', 'statsocial' ); ?>
+                </h1>
+                <div id="post-0" class="post error404 not-found">
+                    <div class="entry-content">
+                        <p>
+                        <?php esc_html_e( 'Apologies, but no results were found for the requested Archive. Perhaps searching will help find a related post.', 'statsocial' ); ?>
+                        </p>
+<?php get_search_form(); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="yui-u">
+                <?php
+                statsocial_prepend_extra_sidebar();
 
-	</div><!-- #content -->
-</div><!-- #container -->
+                if ( $rsidebar_show ) {
+                    get_sidebar( 'extra' );
+                }
 
-<?php get_footer();
+                statsocial_append_extra_sidebar();
+                ?>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="yui-b">
+    <?php
+    statsocial_prepend_default_sidebar();
+
+    get_sidebar( 'default' );
+
+    statsocial_append_default_sidebar();
+    ?>	
+</div>
+</div>
+<?php
+do_action( 'statsocial_after_' . basename( __FILE__ ) );
+
+get_footer( $statsocial_document_type );
+?>

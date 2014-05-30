@@ -1,43 +1,119 @@
 <?php
 /**
- * The template for displaying Search Results pages.
+ * Template for search .
  *
- * @package Pilcrow
- * @since Pilcrow 1.0
+ *
+ * @package statsocial
+ * @since statsocial 0.1
+ *
+ * @uses statsocial_prepend_default_sidebar( )
+ * @uses statsocial_append_default_sidebar( )
  */
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+do_action( 'statsocial_' . basename( __FILE__ ) );
+get_header( $statsocial_document_type );
+do_action( 'statsocial_pre_' . basename( __FILE__ ) );
+?>
+<div id="yui-main">
+<?php statsocial_debug_navitation( __FILE__ ); ?>
+    <div class="yui-b">
+        <div class="<?php echo statsocial_yui_class_modify(); ?>" id="container">
+            <div class="yui-u first<?php statsocial_add_class( 'yui-u first', true ); ?>" <?php statsocial_doctype_elements( '', 'role="main"' ); ?>>
+<?php statsocial_prepend_loop(); ?>
+<?php if ( have_posts() ) { ?>
 
-get_header(); ?>
+                    <h1 class="pagetitle h1">Search Results : <?php the_search_query(); ?></h1>
+                    <ul class="search-results">
+                        <li>
+                            <?php
+                            statsocial_next_prev_links();
+                            ?>
+                        </li>
+                        <?php
+                        while ( have_posts() ) {
 
-<div id="content-container">
-	<div id="content" role="main">
+                            the_post();
+                            ?>
+                            <li>
+                                <div id="post-<?php the_ID(); ?>" <?php statsocial_post_class(); ?> >
+                                    <?php
+                                    statsocial_entry_title();
+                                    ?>
+                                    <div class="posted-on">
+                                        <?php
+                                        statsocial_posted_on();
+                                        ?>
+                                    </div>
+                                    <div class="entry-content clearfix">
 
-		<?php if ( have_posts() ) : ?>
+                                        <?php
+                                        statsocial_prepend_entry_content();
 
-		<h1 class="page-title archive-head"><?php printf( __( 'Search Results for: %s', 'pilcrow' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+                                        statsocial_entry_content();
+                                        ?>
+                                        <br class="clear" />
+                                        <?php
+                                        statsocial_append_entry_content();
+                                        ?>
+                                    </div>
+                                    <div class="entry-meta">
+                                        <?php
+                                        statsocial_posted_in();
 
-		<?php
-			/* Run the loop for the search to output the results.
-			 * If you want to overload this in a child theme then include a file
-			 * called loop-search.php and that will be used instead.
-			 */
-			get_template_part( 'loop', 'search' );
-		?>
+                                        edit_post_link( esc_html__( 'Edit', 'statsocial' ) . statsocial_link_unique( 'Post', $post->ID ), '<span class="edit-link">', '</span>' );
 
-		<?php else : ?>
+                                        statsocial_delete_post_link( esc_html__( 'Trash', 'statsocial' ) . statsocial_link_unique( 'Post', $post->ID ), '<span class="edit-link">', '</span>' );
+                                        ?>
+                                    </div>
+                                    <br class="clear" />
+                                </div>
+                            </li>
 
-		<div id="post-0" class="post no-results not-found">
-			<h2 class="entry-title"><?php _e( 'Nothing Found', 'pilcrow' ); ?></h2>
-			<div class="entry entry-content">
-				<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'pilcrow' ); ?></p>
-				<?php get_search_form(); ?>
-			</div><!-- .entry-content -->
-		</div><!-- #post-0 -->
+                        <?php }//while ( have_posts( ) )	?>
 
-		<?php endif; ?>
+                        <li>
+                            <?php
+                            statsocial_next_prev_links( "nav-below" );
+                            ?>
+                        </li>
+                    </ul>
+                <?php } else { ?>
+                    <div class="fail-search">
+                        <h2 class="center h2">
+                            <?php
+                            esc_html_e( "Nothing was found though it was regrettable. Please change the key word if it is good, and retrieve it.", "statsocial" );
+                            ?>
+                        </h2>
+                        <?php get_search_form(); ?>
+                    </div>
+                <?php } ?>
+                <?php statsocial_append_loop(); ?>
+            </div>
+            <div class="yui-u">
+                <?php
+                statsocial_prepend_extra_sidebar();
 
-	</div><!-- #content -->
-</div><!-- #content-container -->
+                if ( $rsidebar_show ) {
 
-<?php
-get_sidebar();
-get_footer();
+                    get_sidebar( 'extra' );
+                }
+
+                statsocial_append_extra_sidebar();
+                ?>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="yui-b">
+    <?php
+    statsocial_prepend_default_sidebar();
+
+    get_sidebar( 'default' );
+
+    statsocial_append_default_sidebar();
+    ?>	
+</div>
+</div>
+<?php get_footer( $statsocial_document_type ); ?>

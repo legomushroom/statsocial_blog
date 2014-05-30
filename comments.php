@@ -1,68 +1,81 @@
 <?php
 /**
- * The template for displaying Comments.
+ * The template part file for displaying Comments.
  *
- * The area of the page that contains both current comments
- * and the comment form.  The actual display of comments is
- * handled by a callback to pilcrow_comment which is
- * located in the functions.php file.
+ * @package statsocial
+ * @since statsocial 0.1
  *
- * @package Pilcrow
- * @since Pilcrow 1.0
+ * @uses post_password_required( )
+ * @uses have_comments( )
+ * @uses get_comments_number( )
+ * @uses number_format_i18n( get_comments_number( ) )
+ * @uses get_the_title( )
+ * @uses get_comment_pages_count( )
+ * @uses previous_comments_link( )
+ * @uses next_comments_link( )
+ * @uses comments_open( )
+ * @uses comment_form( )
  */
-
-if ( post_password_required() )
-	return;
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+global $statsocial_document_type;
 ?>
-
 <div id="comments">
+        <?php if ( post_password_required() ) { ?>
+        <p class="nopassword">
+    <?php esc_html_e( 'This post is password protected.', 'statsocial' ); ?> 
+    <?php esc_html_e( 'Enter the password to view any comments.', 'statsocial' ); ?>
+        </p>
+    </div>
+    <?php return; ?>
+<?php } //end if ( post_password_required( ) )?>
+    <?php if ( have_comments() ) { ?>
+    <h2 id="comments-title" class="h2">
+        <?php
+        printf( _n( 'One Response to %2$s', '%1$s Responses to %2$s', get_comments_number(), 'statsocial' ), number_format_i18n( get_comments_number() ), '<strong>' . get_the_title() . '</strong>', get_comments_number()
+        );
+        ?>
+    </h2>
+        <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) { // Are there comments to navigate through??>
+        <div id="nav-above-comments" class="clearfix">
+            <span class="nav-previous">
+        <?php previous_comments_link( '<span class="meta-nav">&larr;</span>' . esc_html__( 'Older Comments', 'statsocial' ) ); ?>
+            </span>
+            <span class="nav-next">
+                <?php next_comments_link( esc_html__( 'Newer Comments', 'statsocial' ) . '<span class="meta-nav">&rarr;</span>' ); ?>
+            </span>
+        </div>
+            <?php } // check for comment navigation?>
+    <ol <?php statsocial_comment_class(); ?>>
+    <?php wp_list_comments( array( 'callback' => 'statsocial_comment', 'format' => $statsocial_document_type ) ); ?>
+    </ol>
+        <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) { // Are there comments to navigate through? ?>
+        <div id="nav-below-comments" class="clearfix">
+            <span class="nav-previous">
+        <?php previous_comments_link( '<span class="meta-nav">&larr;</span> ' . esc_html__( 'Older Comments', 'statsocial' ) ); ?>
+            </span>
+            <span class="nav-next">
+                <?php next_comments_link( esc_html__( 'Newer Comments ', 'statsocial' ) . '<span class="meta-nav">&rarr;</span>' ); ?>
+            </span>
+        </div>
+            <?php } // check for comment navigation ?>
+    <?php
+} else { // or, if we don't have comments:
 
-	<?php if ( have_comments() ) : ?>
-		<h3 id="comments-title" class="comment-head">
-			<?php
-				printf( _n( 'One Response to %2$s', '%1$s Responses to %2$s', get_comments_number(), 'pilcrow' ),
-				number_format_i18n( get_comments_number() ), '<em>' . get_the_title() . '</em>' );
-			?>
-		</h3>
-
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-		<div class="navigation">
-			<div class="nav-previous"><?php previous_comments_link( __( '<span class="meta-nav">&larr;</span> Older Comments', 'pilcrow' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments <span class="meta-nav">&rarr;</span>', 'pilcrow' ) ); ?></div>
-		</div> <!-- .navigation -->
-		<?php endif; // check for comment navigation ?>
-
-		<ol class="comment-list">
-			<?php
-				/* Loop through and list the comments. Tell wp_list_comments()
-				 * to use pilcrow_comment() to format the comments.
-				 * If you want to overload this in a child theme then you can
-				 * define pilcrow_comment() and that will be used instead.
-				 * See pilcrow_comment() in pilcrow/functions.php for more.
-				 */
-				wp_list_comments( array( 'callback' => 'pilcrow_comment' ) );
-			?>
-		</ol>
-
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-		<div class="navigation">
-			<div class="nav-previous"><?php previous_comments_link( __( '<span class="meta-nav">&larr;</span> Older Comments', 'pilcrow' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments <span class="meta-nav">&rarr;</span>', 'pilcrow' ) ); ?></div>
-		</div><!-- .navigation -->
-		<?php endif; // check for comment navigation ?>
-
-	<?php else : // or, if we don't have comments:
-
-			/* If there are no comments and comments are closed,
-			 * let's leave a little note, shall we?
-			 */
-			if ( ! comments_open() && ! is_page() ) :
-		?>
-		<p class="nocomments"><?php _e( 'Comments are closed.', 'pilcrow' ); ?></p>
-		<?php endif; // end ! comments_open() ?>
-
-	<?php endif; // end have_comments() ?>
-
-	<?php comment_form(); ?>
-
-</div><!-- #comments -->
+    /* If there are no comments and comments are closed,
+     * let's leave a little note, shall we?
+     */
+    if ( !comments_open() ) {
+        ?>
+        <p class="nocomments">
+        <?php esc_html_e( 'Comments are closed.', 'statsocial' ); ?>
+        </p>
+        <?php } // end ! comments_open( ) 
+    }// end have_comments( )
+    ?>
+<br class="clear" />
+<div class="social">
+    <?php comment_form(); ?>
+</div>
+</div>
